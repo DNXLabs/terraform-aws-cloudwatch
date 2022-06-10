@@ -35,6 +35,7 @@ Terraform module which creates Cloudwatch resources on AWS.
 | evaluate\_low\_sample\_count\_percentiles | Used only for alarms based on percentiles. If you specify ignore, the alarm state will not change during periods with too few data points to be statistically significant. If you specify evaluate or omit this parameter, the alarm will always be evaluated and possibly change state no matter how many data points are available. The following values are supported: ignore, and evaluate. | `string` | `null` | no |
 | evaluation\_periods | The number of periods over which data is compared to the specified threshold. | `number` | n/a | yes |
 | extended\_statistic | The percentile statistic for the metric associated with the alarm. Specify a value between p0.0 and p100. | `string` | `null` | no |
+| filter | Provides a CloudWatch Log Metric Filter resource. | `any` | n/a | yes |
 | insufficient\_data\_actions | The list of actions to execute when this alarm transitions into an INSUFFICIENT\_DATA state from any other state. Each action is specified as an Amazon Resource Name (ARN). | `list(string)` | `null` | no |
 | metric\_name | The name for the alarm's associated metric. See docs for supported metrics. | `string` | `null` | no |
 | metric\_query | Enables you to create an alarm based on a metric math expression. You may specify at most 20. | `any` | `[]` | no |
