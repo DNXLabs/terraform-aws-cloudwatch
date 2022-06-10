@@ -1,4 +1,4 @@
- resource "aws_cloudwatch_log_metric_filter" "default" {
+resource "aws_cloudwatch_log_metric_filter" "default" {
   count          = length(keys(var.filter)) > 0 ? 1 : 0
   name           = var.filter.name
   pattern        = var.filter.pattern

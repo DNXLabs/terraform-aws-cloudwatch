@@ -135,5 +135,5 @@ variable "tags" {
 
 variable "filter" {
   description = "Provides a CloudWatch Log Metric Filter resource."
-  type = any
+  type        = any
 }
