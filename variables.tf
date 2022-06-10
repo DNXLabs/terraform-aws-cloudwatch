@@ -132,3 +132,8 @@ variable "tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "filter" {
+  description = "Provides a CloudWatch Log Metric Filter resource."
+  type = any
+}
