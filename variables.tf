@@ -133,7 +133,8 @@ variable "tags" {
   default     = {}
 }
 
-variable "filter" {
+variable "filters" {
   description = "Provides a CloudWatch Log Metric Filter resource."
   type        = any
+  default     = []
 }
